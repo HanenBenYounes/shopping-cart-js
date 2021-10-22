@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product page</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Logo</h1>
+            <div class="search-box">
+                <input type="text" placeholder="search Text">
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="">What's new</a></li>
+                <li><a href="">Women</a></li>
+                <li><a href="">Men</a></li>
+                <li><a href="">Gear</a></li>
+                <li><a href="">Training</a></li>
+                <li><a href="">Sale</a></li>
+                <li><a href="">Gift Cards</a></li>
+                <li><a href="">Test</a></li>
+            </ul>
+        </div>
+        <div class="product">
+            <div class="images">
+                <div class="slider">
+                    <img src="img/1.jpg" alt="">
+                </div>
+                <div class="thumbnail">
+                    <div class="thumb active">
+                        <img src="img/4.jpg" alt="">
+                    </div>
+                    <div class="thumb">
+                        <img src="img/c.jpg" alt="">
+                    </div>
+                    <div class="thumb">
+                        <img src="img/9.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        <div class="info">
+            <h1>Women Garments</h1>
+            <div class="rating">
+                <h4 class="review"> 3 Reviews </h4>
+                <a href="" class="review"> add Your Review </a>
+            </div>
+            <h1 class="price">$57.00</h1>
+            <h4 class="title">Color</h4>
+            <div class="colors">
+                <span class="color green"></span>
+                <span class="color orange"></span>
+                <span class="color pink"></span>
+            </div>
+            <h4 class="title">Size</h4>
+                <div class="sizes">
+                    <span class="size">Xs</span>
+                    <span class="size">S</span>
+                    <span class="size">M</span>
+                    <span class="size">L</span>
+                    <span class="size">XL</span>
+               </div>
+               <h4 class="title">Qty</h4>
+               <input type="text" value="1" class="qty">
+               <a href="" class="cart">Add to cart</a>
+        </div>
+    </div> 
+</div>
+    <script>
+        const thumbs = document.querySelectorAll('.thumb');
+        const slider = document.querySelector('.slider');
+        function changeImage(){
+            thumbs.forEach(thumb => thumb.classList.remove('active'));
+            this.classList.add('active');
+            slider.getElementsByTagName('img')[0].src =
+            this.getElementsByTagName('img')[0].src;
+        }
+        thumbs.forEach(thumb => thumb.addEventListener('click',
+        changeImage));
+        
+    </script>
+    
+</body>
+</html>
